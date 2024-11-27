@@ -4,6 +4,8 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ItemsModule } from './items/items.module';
+import { FeedbackModule } from './feedback/feedback.module';
+import { BookingModule } from './booking/booking.module';
 
 @Module({
   imports: [
@@ -12,6 +14,8 @@ import { ItemsModule } from './items/items.module';
       rootPath: join(__dirname, '..', 'public'),
       serveRoot: '/public',
     }),
+    FeedbackModule,
+    BookingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
